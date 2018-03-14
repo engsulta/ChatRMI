@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="cutomcontact" prefHeight="70.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="headerPohto" fill="#a3ab9e" layoutX="35.0" layoutY="35.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#1fff70" layoutX="54.0" layoutY="50.0" radius="5.0" stroke="#575656" strokeType="INSIDE" />
+      <Label layoutX="77.0" layoutY="18.0" text="Eman Fekry">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="37.0" style="-fx-background-color: lightgray; -fx-background-radius: 25;" text="available">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="102.0" layoutY="70.0" startX="-90.0" strokeWidth="0.2" />
+      <MaterialDesignIconView fx:id="notificationMark" glyphName="FACEBOOK_MESSENGER" layoutX="203.0" layoutY="40.0" opacity="0.0" size="20" />
+   </children>
+</Pane>

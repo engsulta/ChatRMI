@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 15, 2018, 10:28:18 PM
+    Author     : sulta
+*/
+
+* {
+    -fx-primary : #3599ba;
+    -fx-secondary : #e869ef;
+    -fx-primarytext : #f9f9f7;
+    -fx-darkblue:#3D73A2;
+    -fx-lightblue:#8bd6f4;
+    -fx-online:#a1f48b;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+}
+.root{
+    -fx-background-color: -fx-primary;
+}
+.button{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 13pt;
+}
+
+.button:hover{
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.text-field
+{
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size : 13pt;
+    -jfx-focus-color: -fx-secondary;
+    -fx-text-fill: derive(-fx-secondary, 80%);
+}
+.glyph-icon
+{
+    -fx-fill: -fx-primarytext;
+}
+
+

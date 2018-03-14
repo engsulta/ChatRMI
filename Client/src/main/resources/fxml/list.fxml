@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="list" prefHeight="500.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.main.ListController">      
+    <children>
+        <Pane prefHeight="56.0" prefWidth="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="searchFriend" layoutX="12.0" layoutY="26.0" prefHeight="30.0" prefWidth="226.0" promptText="Search">
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                </TextField>
+                <FontAwesomeIconView glyphName="SEARCH" layoutX="21.0" layoutY="45.0" opacity="0.5" size="12" style="-fx-fill: #4A9091;" />
+                <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="10.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo2.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <JFXTabPane fx:id="tabName" layoutX="9.0" layoutY="72.0" prefHeight="407.0" prefWidth="250.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+            <tabs>
+                <Tab fx:id="homeTab">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="HOME" size="20" text="" />
+                    </graphic>
+                    <content>
+                        <AnchorPane id="AnchorPane" prefHeight="404.0" prefWidth="250.0">
+                            <children>
+                                <ListView fx:id="myContactList" layoutY="55.0" prefHeight="347.0" prefWidth="248.0" style="-fx-background-color: #4A9091;" stylesheets="@../styles/mainStyle.css" />
+                                <JFXButton fx:id="addGroup" layoutX="87.0" layoutY="14.0" onMouseClicked="#HandleOnAddGroup" text="Add group" />
+                                <JFXButton fx:id="done" layoutX="21.0" layoutY="14.0" onMouseClicked="#handleOnDoneBtn" text="Done" />
+                    
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="profileTab">
+                    <graphic>
+                        <MaterialDesignIconView fill="#f8f7f7" glyphName="ACCOUNT_PLUS" layoutX="84.0" layoutY="147.0" size="20" text="" />
+                    </graphic>
+                    <content>
+                        <AnchorPane fx:id="addFriend" minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="250.0">
+                            <children>
+                                <Pane layoutX="14.0" layoutY="-3.0" prefHeight="40.0" prefWidth="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="74.0" layoutY="11.0" text="AddNewContact" textFill="#fcf8f8">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           
+                           
+                                </Pane>
+                                <Pane layoutY="62.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <JFXTextField fx:id="UserName1" labelFloat="true" layoutX="25.0" layoutY="20.0" prefHeight="33.0" prefWidth="196.0" promptText="Your Name" unFocusColor="#07fc07" />
+                                        <TextField fx:id="friendEmail" layoutX="12.0" layoutY="27.0" prefHeight="30.0" prefWidth="226.0" promptText="Search By email">
+                                            <padding>
+                                                <Insets left="25.0" />
+                                            </padding>
+                                        </TextField>
+                                        <FontAwesomeIconView glyphName="SEARCH" layoutX="19.0" layoutY="46.0" opacity="0.5" size="12" />
+                                    </children>
+                                </Pane>
+                                <JFXButton fx:id="submit" defaultButton="true" layoutX="86.0" layoutY="318.0" onMouseClicked="#handleOnSubmit" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00BFA5;" text="Submit " textFill="#fcf5f5" />
+                                <Text fx:id="errorMessage" layoutX="36.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="settingsTab">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="SETTINGS" size="20" />
+                    </graphic>
+                    <content>
+                        <AnchorPane fx:id="profileSettings" minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="250.0">
+                            <children>
+                                <Pane layoutX="14.0" layoutY="-3.0" prefHeight="40.0" prefWidth="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="97.0" layoutY="12.0" text="Profile" textFill="#e8e2e2">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Circle fx:id="profilePohto" fill="#989999" layoutX="125.0" layoutY="127.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                <Pane layoutY="209.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <JFXTextField fx:id="UserName" disable="true" labelFloat="true" layoutX="25.0" layoutY="20.0" prefHeight="33.0" prefWidth="196.0" promptText="Your Name" unFocusColor="#07fc07">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </JFXTextField>
+                                    </children>
+                                </Pane>
+                                <Pane layoutY="281.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <JFXComboBox fx:id="statusCombobox" focusColor="#1ae85e" labelFloat="true" layoutX="22.0" layoutY="21.0" prefHeight="30.0" prefWidth="197.0" promptText="select status" unFocusColor="#78e46a" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="notificationTab">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="EARTH" size="20" />
+                    </graphic>
+                    <content>
+                        <AnchorPane fx:id="notification" minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="250.0">
+                            <children>
+                                <ListView fx:id="friendRequestList2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4A9091;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Group">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="myGroupList2" prefHeight="373.0" prefWidth="250.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </JFXTabPane>
+        <Pane prefHeight="23.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+    </children>
+</AnchorPane>

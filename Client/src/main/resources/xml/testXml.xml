@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<chatHistory  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Message_Schema.xsd">
+    <From>Gehad</From>
+    <To>Eman</To>
+    <To>Sherif</To>
+    <To>Sultan</To>
+    <Msg>
+        <Content>Hi, How are you?</Content>
+        <Date>2018-02-09+07:00</Date>
+        <Format>
+            <Color>Red</Color>
+            <FontName>TimesNewRoman</FontName>
+            <FontSize>14</FontSize>
+            <FontStyle>Bold</FontStyle>
+        </Format>
+    </Msg>
+    
+    <Msg>
+        <Content>Bye bye</Content>
+        <Date>2018-02-09+07:00</Date>
+        <Format>
+            <Color>Black</Color>
+            <FontName>TimesNewRoman</FontName>
+            <FontSize>14</FontSize>
+            <FontStyle>Bold</FontStyle>
+        </Format>
+    </Msg>
+</chatHistory>
+

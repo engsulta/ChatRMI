@@ -1,0 +1,12 @@
+#contactvbox{
+    -fx-background-color: white;
+    -fx-background-radius: 5.0;
+    -fx-padding: 7;
+
+}
+
+#button
+{
+    -fx-background-color: #4080FF;
+    -fx-background-radius: 10;
+}

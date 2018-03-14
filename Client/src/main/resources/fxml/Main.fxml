@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onMouseDragged="#HandleonMouseDragged" onMousePressed="#HandleonMousePressed" prefHeight="500.0" prefWidth="800.0" stylesheets="@../styles/mainStyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.main.MainController">
+   <children>
+       <fx:include fx:id="list" source="list.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <fx:include fx:id="header" source="header.fxml" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <fx:include fx:id="footer" source="footer.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="285.0" layoutY="127.0" pannable="true" prefHeight="287.0" prefWidth="550.0" styleClass="chatareapane" stylesheets="@../styles/mainStyle.css" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+        <content>
+            <VBox id="textBoxV" fx:id="Vbox" prefHeight="284.0" prefWidth="548.0" styleClass="chatareapane" />
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

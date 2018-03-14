@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="footer" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.main.Footer">
+   <children>
+      <VBox layoutY="1.0">
+         <children>
+            <AnchorPane fx:id="messageFormat" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <JFXComboBox fx:id="fontNameComboBox" focusColor="#89f992" labelFloat="true" layoutX="14.0" layoutY="8.0" onAction="#handleOnfontNameComboBox" prefHeight="10.0" prefWidth="171.0" promptText="font-family" />
+                  <JFXComboBox fx:id="fontSizeComboBox" focusColor="#89f992" labelFloat="true" layoutX="204.0" layoutY="8.0" onAction="#handleOnfontSizeComboBox" prefHeight="25.0" prefWidth="62.0" promptText="size" />
+                  <JFXButton layoutX="498.0" onAction="#HandleBold" prefHeight="10.0" prefWidth="60.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="FORMAT_BOLD" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="450.0" onAction="#HandleUnderline" prefHeight="10.0" prefWidth="60.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="FORMAT_UNDERLINE" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="460.0" layoutY="10.0" onAction="#handleItalicFont" prefHeight="10.0" prefWidth="60.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="FORMAT_ITALIC" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXColorPicker fx:id="colorPicker" layoutX="298.0" layoutY="8.0" onAction="#handleOnColorPicker" prefHeight="25.0" prefWidth="70.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="60.0" prefWidth="550.0">
+               <children>
+                  <Separator layoutX="67.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="490.0" AnchorPane.topAnchor="0.0" />
+                  <MaterialDesignIconView glyphName="PAPERCLIP" layoutX="14.0" layoutY="40.0" onMousePressed="#HandleOnFileSend" rotate="45.0" size="30" style="-fx-fill: #EEEEEE;" />
+                  <TextField fx:id="textMessage" layoutX="67.0" layoutY="14.0" prefHeight="37.0" prefWidth="434.0" promptText="text message">
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </TextField>
+                  <MaterialDesignIconView fill="#e4dddd" glyphName="SEND" layoutX="468.0" layoutY="40.0" onMousePressed="#HandleOnSendMessage" size="25" strokeWidth="0.0" style="-fx-fill: #4A9091;" />
+                  <MaterialDesignIconView glyphName="DOTS_VERTICAL" layoutX="511.0" layoutY="40.0" onMousePressed="#HandleOnMessageDetails" opacity="0.0" size="25" />
+                  <Label fx:id="sending" layoutX="12.0" layoutY="39.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

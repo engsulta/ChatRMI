@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 12, 2018, 12:15:07 AM
+    Author     : sulta
+*/
+
+   
+    
+* {
+    -fx-primary : #4A9091;
+    -fx-secondary : #00BFA5;
+    -fx-primarytext : #EEEEEE;
+    -fx-darkblue:#3D73A2;
+    -fx-lightblue:#8bd6f4;
+    -fx-online:#a1f48b;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+}
+.root{
+    -fx-background-color: -fx-primary;
+}
+.glyph-icon
+{
+    -fx-fill: -fx-primarytext;
+}
+
+.button{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    
+    -fx-font-size: 12pt;
+}
+
+.button:hover{
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.tab{
+    -fx-background-color: -fx-primary;
+    -fx-pref-width : 45;
+    -fx-pref-height : 28;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+
+#textBoxV{-fx-background-image: url("whats.jpg");}
+
+
+
+.list-cell:filled:hover {
+    -fx-background-color: #47898A;
+   
+}
+.list-cell:focus {
+    -fx-background-color: #47898A;
+   
+}

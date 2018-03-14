@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="314.0" prefWidth="420.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.welcome.WelcomeScreenController">
+  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="135.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Server/src/main/resources/images/logo2.png" />
+         </image>
+      </ImageView>
+   <MaterialDesignIconView glyphName="EMOTICON_HAPPY" layoutX="120.0" layoutY="67.0" opacity="0.2" size="30" text="" />
+   <MaterialDesignIconView glyphName="EMOTICON" layoutX="34.0" layoutY="172.0" opacity="0.2" size="35" />
+   <MaterialDesignIconView glyphName="EMOTICON" layoutX="198.0" layoutY="283.0" opacity="0.2" size="25" />
+   <Label layoutX="108.0" layoutY="176.0" text="Welcome To GoCHat" textFill="#e8e4e4">
+      <font>
+         <Font name="Franklin Gothic Demi Cond" size="30.0" />
+      </font>
+   </Label>
+   <JFXProgressBar layoutX="137.0" layoutY="234.0" prefHeight="5.0" prefWidth="172.0" />
+        
+</AnchorPane>

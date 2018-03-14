@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#handleMouseDragged" onMousePressed="#handlePanePressed" prefHeight="314.0" prefWidth="589.0" stylesheets="@../styles/loginfxml.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.server.login.LoginFxmlController">
+   <children>
+      <FontAwesomeIconView glyphName="LOCK" layoutX="196.0" size="50" wrappingWidth="22.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="20.0" />
+      <FontAwesomeIconView glyphName="USER" size="25" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="100.0" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="35.0" layoutY="131.0" size="25" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="180.0" />
+      <JFXTextField fx:id="AdminName" labelFloat="true" layoutY="92.0" prefHeight="33.0" prefWidth="259.0" promptText="Admin Name" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="90.0" />
+      <JFXPasswordField fx:id="AdminPassword" labelFloat="true" prefHeight="33.0" prefWidth="259.0" promptText="Admin Password" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="170.0" />
+      <JFXButton onAction="#HandleLoginAction" prefHeight="33.0" prefWidth="80.0" ripplerFill="WHITE" text="Login" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="250.0" />
+      <JFXButton layoutX="110.0" layoutY="220.0" onAction="#HandleCancelAction" prefHeight="33.0" prefWidth="80.0" ripplerFill="WHITE" text="Cancel" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="250.0" />
+      <ImageView fitHeight="314.0" fitWidth="215.0" layoutX="380.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.047271728515625" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/unnamed%20(1).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="409.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="170.0" layoutX="409.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/welcom.png" />
+         </image>
+      </ImageView>
+      <MaterialDesignIconView glyphName="CLOSE" layoutX="569.0" layoutY="19.0" onMousePressed="#HandleOnClosePressed" />
+      <MaterialDesignIconView glyphName="MINUS" layoutX="547.0" layoutY="20.0" onMousePressed="#handleOnMinimizePressed" />
+   </children>
+</AnchorPane>

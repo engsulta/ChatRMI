@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="profileSettings" minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.tabs.ProfileSettingsController">
+   <children>
+      <Pane layoutX="14.0" layoutY="-3.0" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: lightgray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="97.0" layoutY="12.0" text="Profile">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView glyphName="KEYBOARD_BACKSPACE" layoutX="20.0" layoutY="25.0" onMousePressed="#HandleOnBackPressed" />
+         </children>
+      </Pane>
+      <Circle fx:id="headerPohto1" fill="#d4dad1" layoutX="125.0" layoutY="127.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <MaterialDesignIconView glyphName="CAMERA" layoutX="157.0" layoutY="189.0" onMousePressed="#HandleOnCamera" size="30" AnchorPane.leftAnchor="157.0" AnchorPane.topAnchor="162.75" />
+      <Pane layoutY="209.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="UserName" labelFloat="true" layoutX="25.0" layoutY="20.0" prefHeight="33.0" prefWidth="196.0" promptText="Your Name" unFocusColor="#07fc07">
+               <padding>
+                  <Insets right="20.0" />
+               </padding></JFXTextField>
+            <MaterialDesignIconView glyphName="PEN" layoutX="195.0" layoutY="49.0" onMousePressed="#HandleOnCamera" size="15" strokeWidth="0.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="281.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="status" labelFloat="true" layoutX="25.0" layoutY="20.0" prefHeight="33.0" prefWidth="196.0" promptText="Status" unFocusColor="#07fc07">
+               <padding>
+                  <Insets right="20.0" />
+               </padding></JFXTextField>
+            <MaterialDesignIconView glyphName="PEN" layoutX="194.0" layoutY="50.0" onMousePressed="#HandleOnCamera" size="15" strokeWidth="0.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

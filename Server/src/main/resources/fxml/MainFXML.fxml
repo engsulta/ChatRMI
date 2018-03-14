@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#HandleOnPaneDragged" onMousePressed="#HandleOnPanePressed" prefHeight="496.0" prefWidth="748.0" stylesheets="@../styles/loginfxml.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdevsul.server.mainui.MainFXMLController">
+   <children>
+      <BorderPane prefHeight="499.0" prefWidth="748.0">
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab fx:id="showClientTab" text="Database">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="412.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox fx:id="client_info" alignment="CENTER" prefHeight="251.0" prefWidth="781.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="195.0" prefWidth="328.0" spacing="20.0">
+                                                   <HBox.margin>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <FontAwesomeIconView glyphName="USER" size="30" />
+                                                      <HBox spacing="7.0">
+                                                         <children>
+                                                            <FontAwesomeIconView glyphName="SEARCH" size="15">
+                                                               <HBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </HBox.margin>
+                                                            </FontAwesomeIconView>
+                                                            <JFXTextField fx:id="clientEmailInput" labelFloat="true" prefHeight="26.0" prefWidth="230.0" promptText="Client Email">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <StackPane fx:id="clientInfoContainer" prefHeight="195.0" prefWidth="437.0">
+                                                   <HBox.margin>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="195.0" prefWidth="422.0">
+                                                         <children>
+                                                            <Text fx:id="clientUserName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" textAlignment="CENTER" wrappingWidth="460.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="clientEmail" layoutX="10.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" textAlignment="CENTER" wrappingWidth="460.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="clientStatus" layoutX="10.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" textAlignment="CENTER" wrappingWidth="460.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="81.0" prefWidth="848.0" spacing="10.0">
+                                             <children>
+                                                <Button fx:id="btnSendNotification" mnemonicParsing="false" onAction="#HandleShowNotification" prefHeight="48.0" prefWidth="159.0" text="Send Notification" />
+                                                <JFXButton onAction="#handleSearchByemail" prefHeight="44.0" prefWidth="151.0" text="Show">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </JFXButton>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <graphic>
+                              <MaterialDesignIconView glyphName="DATABASE" size="30" />
+                           </graphic>
+                        </Tab>
+                        <Tab onSelectionChanged="#HandleStatisticsTab" text="Statistics">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <HBox prefHeight="239.0" prefWidth="748.0">
+                                       <children>
+                                          <PieChart fx:id="OnlineChart" prefHeight="239.0" prefWidth="346.0" title="Online/Offline" />
+                                          <PieChart fx:id="GenderChart" prefHeight="239.0" prefWidth="394.0" title="Male/Female" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="69.0" prefWidth="557.0">
+                                       <children>
+                                          <JFXButton fx:id="renew" onAction="#HandleRenewAction" prefHeight="44.0" prefWidth="151.0" text="Renew">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <MaterialDesignIconView glyphName="CHART_PIE" size="30" />
+                           </graphic>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="125.0" prefWidth="848.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="197.0" layoutY="49.0" prefHeight="61.0" prefWidth="538.0">
+                     <children>
+                        <Text fill="#f2eded" layoutX="20.0" layoutY="36.0" opacity="0.3" stroke="#e89191" strokeType="OUTSIDE" strokeWidth="0.0" text="Port Number" wrappingWidth="97.36328125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#eee8e8" layoutX="263.0" layoutY="36.0" opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="IP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="PortNumber" layoutX="118.0" layoutY="12.0" opacity="0.5" prefHeight="34.0" prefWidth="137.0" promptText="choose Port" />
+                        <JFXTextField fx:id="Ip" editable="false" layoutX="328.0" layoutY="18.0" opacity="0.3" promptText="machine IP" />
+                     </children>
+                  </Pane>
+                  <HBox layoutX="44.0" layoutY="8.892578125" opacity="0.2" spacing="5.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="SETTINGS" size="20" />
+                        <Text fill="#fffafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Settings">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <JFXToggleButton fx:id="togglePower" layoutX="14.0" layoutY="48.0" onAction="#HandleOnPowerAction" prefHeight="44.0" prefWidth="141.0" text="Server OFF" textFill="#f5f3f3" toggleColor="#16db2e" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <Pane prefHeight="25.0" prefWidth="748.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MaterialDesignIconView glyphName="CLOSE" layoutX="718.0" layoutY="17.0" onMousePressed="#HandleOnClose" />
+                  <MaterialDesignIconView glyphName="MINUS" layoutX="684.0" layoutY="17.0" onMousePressed="#HandleOnMinimize" />
+                  <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="9.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>
